@@ -36,7 +36,7 @@ function main() {
         "badestelle": new DefaultIconClass({iconUrl: "icons/Badestelle.svg"}),
         "monumentalbrunnen": new DefaultIconClass({iconUrl: "icons/Monumentalbrunnen.svg"}),
         "schwimmbad": new DefaultIconClass({iconUrl: "icons/Schwimmbad.svg"}),
-        "trinkbrunnen": new DefaultIconClass({iconUrl: "icons/trinkbrunnen.svg"}),
+        "trinkbrunnen": new DefaultIconClass({iconUrl: "icons/Trinkbrunnen.svg"}),
         "parkanlage": new DefaultIconClass({iconUrl: "icons/Parkanlage.svg"}),
     }
 
