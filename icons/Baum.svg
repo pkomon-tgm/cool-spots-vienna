@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="baum-groesser-15m-icon" role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19 19" preserveAspectRatio="xMidYMid meet" style="enable-background:new 0 0 19 19;" xml:space="preserve">
+<title id="title">Baum mehr als 15 Meter</title>
+<desc id="desc">An diesem Platz gibt es einen Baum mit einem Stammdurchmesser von mehr als 15 Meter.</desc>
+<style type="text/css">
+<![CDATA[
+    .circle{stroke:#1D1D1D;stroke-width:0.5;fill:#00823A;}
+]]>
+</style>
+<circle role="presentation" id="icon-baum" class="circle" cx="9.5" cy="9.5" r="9.5"/>
+</svg>
