@@ -26,7 +26,18 @@ function mockPointsTree(path) {
             console.log("loaded raw tree data", data);
             const points = data.features.map(feature =>
                 new PointObject(Coordinates.fromLonLat(feature.geometry.coordinates),
-                    (+feature.properties.BAUMHOEHE)*2));
+                    (+feature.properties.KRONENDURCHMESSER)));
+            return points;
+        });
+}
+
+function mockPointsParkanlage(path) {
+    return d3.json(path)
+        .then(data => {
+            console.log("loaded raw tree data", data);
+            const points = data.features.map(feature =>
+                new PointObject(Coordinates.fromLonLat(feature.geometry.coordinates),
+                    Math.sqrt(parseFloat(feature.properties.FLAECHE.replace(".",""))) / Math.PI))
             return points;
         });
 }

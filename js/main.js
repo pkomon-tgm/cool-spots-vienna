@@ -299,7 +299,7 @@ function main() {
         .catch(err => console.log("failed loading monumentalbrunnen", err));
 
     //getAndMapToPointObjects()
-    mockPoints("/data_orig/parkanlagen.json", 5)
+    mockPointsParkanlage("/data_orig/parkanlagen.json")
         .then(pointObjects => {
             console.log("done loading parkanlagen", pointObjects);
             parkanlagenPoints.push(...pointObjects);
