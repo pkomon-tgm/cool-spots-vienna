@@ -33,11 +33,11 @@ function main() {
         }
     });
     let icons = {
-        "badestelle": new DefaultIconClass({iconUrl: "/icons/Badestelle.svg"}),
-        "monumentalbrunnen": new DefaultIconClass({iconUrl: "/icons/Monumentalbrunnen.svg"}),
-        "schwimmbad": new DefaultIconClass({iconUrl: "/icons/Schwimmbad.svg"}),
-        "trinkbrunnen": new DefaultIconClass({iconUrl: "/icons/trinkbrunnen.svg"}),
-        "parkanlage": new DefaultIconClass({iconUrl: "/icons/Parkanlage.svg"}),
+        "badestelle": new DefaultIconClass({iconUrl: "icons/Badestelle.svg"}),
+        "monumentalbrunnen": new DefaultIconClass({iconUrl: "icons/Monumentalbrunnen.svg"}),
+        "schwimmbad": new DefaultIconClass({iconUrl: "icons/Schwimmbad.svg"}),
+        "trinkbrunnen": new DefaultIconClass({iconUrl: "icons/trinkbrunnen.svg"}),
+        "parkanlage": new DefaultIconClass({iconUrl: "icons/Parkanlage.svg"}),
     }
 
     // from https://colorbrewer2.org/
@@ -239,7 +239,7 @@ function main() {
     }
 
     //getAndMapToPointObjects(BADESTELLEN_URL)
-    mockPoints("/data_orig/badestellen.json", 50)
+    mockPoints("data_orig/badestellen.json", 50)
         .then(pointObjects => {
             console.log("done loading badestellen", pointObjects);
             badestellenPoints.push(...pointObjects);
@@ -248,7 +248,7 @@ function main() {
         .catch(err => console.log("failed loading badestellen", err));
 
     //getAndMapToPointObjects(BAEUME_URL)
-    mockPointsTree("/data_orig/baeume.json")
+    mockPointsTree("data_orig/baeume.json")
         .then(pointObjects => {
             let trees = pointObjects.map(point => point.coordinates.toLatLon());
             let circles = pointObjects.map(point => L.circle(point.coordinates.toLatLon(), {
@@ -274,7 +274,7 @@ function main() {
         .catch(err => console.log("failed loading trees", err));
 
     //getAndMapToPointObjects(TRINKBRUNNEN_URL)
-    mockPointsDrinkingFountain("/data_orig/trinkbrunnen.json", 2)
+    mockPointsDrinkingFountain("data_orig/trinkbrunnen.json", 2)
     .then(pointObjects => {
             console.log("done loading trinkbrunnen", pointObjects);
             trinkbrunnenPoints.push(...pointObjects);
@@ -289,7 +289,7 @@ function main() {
         })
         .catch(err => console.log("failed loading drinking fountains", err));
 
-    mockPoints("/data_orig/monumentalbrunnen.json", 10)
+    mockPoints("data_orig/monumentalbrunnen.json", 10)
     //getAndMapToPointObjects(MONUMENTALBRUNNEN_URL)
         .then(pointObjects => {
             console.log("done loading monumentalbrunnen", pointObjects);
@@ -299,7 +299,7 @@ function main() {
         .catch(err => console.log("failed loading monumentalbrunnen", err));
 
     //getAndMapToPointObjects()
-    mockPointsParkanlage("/data_orig/parkanlagen.json")
+    mockPointsParkanlage("data_orig/parkanlagen.json")
         .then(pointObjects => {
             console.log("done loading parkanlagen", pointObjects);
             parkanlagenPoints.push(...pointObjects);
@@ -308,7 +308,7 @@ function main() {
         .catch(err => console.log("failed loading parkanlagen", err));
 
     //getAndMapToPointObjects(SCHWIMMBAEDER_URL)
-    mockPoints("/data_orig/schwimmbaeder.json", 10)
+    mockPoints("data_orig/schwimmbaeder.json", 10)
         .then(pointObjects => {
             console.log("done loading schwimmbaeder", pointObjects);
             schwimmbaederPoints.push(...pointObjects);
@@ -317,7 +317,7 @@ function main() {
         .catch(err => console.log("failed loading monumentalbrunnen", err));
 
     //getAndMapToMultiPolygonObjects(OEFF_GRUENFLAECHEN_URL)
-    mockMultiPolygons("/data_orig/gruenflaechen.json")
+    mockMultiPolygons("data_orig/gruenflaechen.json")
         .then(multiPolygonObjects => {
             let listOfListsOfPolygons = multiPolygonObjects.map(multiPolygonObjects => multiPolygonObjects.listOfPolygons);
             let listOfAllPolygons = [].concat(...listOfListsOfPolygons);
@@ -339,7 +339,7 @@ function main() {
         .catch(err => console.log("failed loading gruenflaechen", err));
 
     //getAndMapToMultiPolygonObjects(STEHENDE_GEWAESSER_URL)
-    mockMultiPolygons("/data_orig/stehendegewaesser.json")
+    mockMultiPolygons("data_orig/stehendegewaesser.json")
         .then(multiPolygonObjects => {
             let listOfListsOfPolygons = multiPolygonObjects.map(multiPolygonObjects => multiPolygonObjects.listOfPolygons);
             let listOfAllPolygons = [].concat(...listOfListsOfPolygons);
@@ -361,7 +361,7 @@ function main() {
         .catch(err => console.log("failed loading stehende gewässer", err));
 
     //getAndMapToMultiPolygonObjects(GRUENGUERTEL_URL)
-    mockMultiPolygons("/data_orig/gruenguertel.json")
+    mockMultiPolygons("data_orig/gruenguertel.json")
         .then(multiPolygonObjects => {
             let listOfListsOfPolygons = multiPolygonObjects.map(multiPolygonObjects => multiPolygonObjects.listOfPolygons);
             let listOfAllPolygons = [].concat(...listOfListsOfPolygons);
