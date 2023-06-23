@@ -134,7 +134,7 @@ function main() {
 
     let trinkbrunnenHexBinsLayerGroup = createLayerGroupWithLegend(
         createLegend("bottomright",
-            ["= 1 TrinkbrunnenBaum", "= 2 Trinkbrunnen", "> 2 Trinkbrunnen"],
+            ["= 1 Trinkbrunnen", "= 2 Trinkbrunnen", "> 2 Trinkbrunnen"],
             COLORS_BLUE_3)
     );
     map.layerControl.addOverlay(trinkbrunnenHexBinsLayerGroup, "Trinkbrunnen (Hexbins)");
